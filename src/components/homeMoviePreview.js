@@ -1,8 +1,7 @@
-
-
 import useAllMovies from '../API_DATA';
-import TitlePreview from './TitlePreview';
 import BackdropPreview from './backdropPreview';
+
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 
 const HomeMoviePreview = () => {
 
@@ -11,9 +10,7 @@ const HomeMoviePreview = () => {
     return (
         <div>
             <BackdropPreview movies={movies} />
-            <TitlePreview movies={movies} />
         </div>
-
     )
 }
 
