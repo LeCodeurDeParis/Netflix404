@@ -5,7 +5,7 @@ import avatarPurple from '../assets/icons/Purple_Avatar.svg';
 
 function HeaderMenu() {
     return (
-        <div className='flex w-full h-20 items-center justify-between px-14 bg-gradient-to-b from-black/70 to-black/0'>
+        <div className='flex w-full h-20 items-center justify-between px-14 bg-gradient-to-b from-black/70 to-black/0 absolute z-10'>
             <div className='flex items-center gap-11'>
                 <img src={logo} alt='netflix-logo'/>
                 <div className='flex items-start gap-11 text-gray-300'>

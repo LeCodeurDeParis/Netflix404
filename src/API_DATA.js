@@ -13,6 +13,8 @@ const useAllMovies = (endpoint = 'movie/popular') => {
                 const response = await fetch(`${URL}/${endpoint}?api_key=${API_KEY_FETCH}`)
                 const data = await response.json()
 
+                console.log(data)
+
                 setMovies(data.results || [])
             } catch (e) {
                 console.error("Erreur lors de la récupération des données : ", e)
