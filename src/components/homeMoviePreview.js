@@ -1,5 +1,3 @@
-
-
 import useAllMovies from '../API_DATA';
 import TitlePreview from './TitlePreview';
 import BackdropPreview from './backdropPreview';
