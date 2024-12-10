@@ -10,13 +10,13 @@ function BackdropPreview({ movies }) {
     
   return (
     <>
-      <div className="relative w-full h-[80vh]">
+      <div className="relative w-full h-[110vh]">
         <img
           src={`${IMAGE_BASE_URL}${ movies[0].backdrop_path }`}
           alt={movies[0].title}
           className="w-full h-full object-cover"
         />
-        <div className='flex flex-col items-center justify-center w-96 h-[45%] absolute z-10 inset-y-0 left-10 my-auto gap-5 bg-gradient-to-r from-black/60 to-black/40 rounded-lg p-6'>
+        <div className='flex flex-col items-center justify-center w-96 h-[45%] absolute z-10 top-0 bottom-[20vh] left-10 my-auto gap-5 bg-gradient-to-r from-black/60 to-black/40 rounded-lg p-6'>
           <p className="text-white text-3xl font-bold">{movies[0].title}</p>
           <p className="w-full text-white">{movies[0].overview}</p>
 
@@ -24,7 +24,6 @@ function BackdropPreview({ movies }) {
             <img src={playButton} alt='play-button'/>
             <img src={mInfoButton} alt='more-info-button'/>
           </div>
-
         </div>
       </div>
     </>
