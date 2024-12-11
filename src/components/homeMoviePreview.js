@@ -1,10 +1,10 @@
-import useAllMovies from '../API_DATA';
+import usePopularMovies from '../MOVIE_DATA_POPULAR';
 import BackdropPreview from './backdropPreview';
 
 
 const HomeMoviePreview = () => {
 
-    const { movies } = useAllMovies();
+    const { movies } = usePopularMovies();
 
     return (
         <div>

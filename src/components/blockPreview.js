@@ -58,14 +58,13 @@ function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount }) {
         ));
     }, [movies, recentlyAddedCount, leavingSoonCount]);
 
-    console.log('State actuel:', randomIndexes);
     return (
-        <div className="flex gap-1.5 w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory">
+        <div className="flex gap-1.5 max-w-full overflow-x-scroll overflow-y-hidden">
             {movies.slice(1).map((movie, index) => {
                 const originalIndex = index + 1;
 
                 return (
-                    <div key={movie.id} className="w-32 relative flex-shrink-0 snap-start">
+                    <div key={movie.id} className="w-32 relative flex-shrink-0">
                         <img
                             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                             alt={movie.title}
@@ -97,5 +96,6 @@ function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount }) {
         </div>
     )
 }
+
 
 export default BlockPreview;

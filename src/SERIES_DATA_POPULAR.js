@@ -3,28 +3,27 @@ import { useEffect, useState } from 'react';
 const API_KEY_FETCH = process.env.REACT_APP_API_KEY;
 const URL = 'https://api.themoviedb.org/3';
 
-
-const useAllMovies = (endpoint = 'movie/popular') => {
-    const [movies, setMovies] = useState([]);
+const usePopularSeries = (endpoint = 'tv/popular') => {
+    const [series, setSeries] = useState([]);
 
     useEffect(() => {
-        const fetchAllMovies = async () => {
+        const fetchAllSeries = async () => {
             try {
                 const response = await fetch(`${URL}/${endpoint}?api_key=${API_KEY_FETCH}`)
                 const data = await response.json()
 
                 console.log(data)
 
-                setMovies(data.results || [])
+                setSeries(data.results || [])
             } catch (e) {
                 console.error("Erreur lors de la récupération des données : ", e)
             }
         }
         
-        fetchAllMovies()
+        fetchAllSeries()
     }, [endpoint])
 
-    return { movies }
+    return { series }
 }
 
-export default useAllMovies
+export default usePopularSeries;
