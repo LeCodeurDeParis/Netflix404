@@ -2,6 +2,7 @@ import usePopularMovies from '../MOVIE_DATA_POPULAR';
 import usePopularSeries from '../SERIES_DATA_POPULAR';
 import useTopRatedMovies from '../TOP_RATED_DATA';
 import useTrendingMovies from '../TRENDING_MOVIE_DATA';
+import useDiscoverMovies from '../DISCOVER_MOVIE_DATA';
 import Animation from './animation';
 import BlockContent from "./blockContent";
 import ContinueWatching from './continueWatching';
@@ -12,6 +13,7 @@ function Main(){
     const { series } = usePopularSeries();
     const { topmovies } = useTopRatedMovies();
     const { trendingmovies } = useTrendingMovies();
+    const { discovermovies } = useDiscoverMovies();
 
     return (
         <div className="flex flex-col items-start -mt-[35vh]">
@@ -24,7 +26,7 @@ function Main(){
             <ContinueWatching Block_Title={"Continue Watching"} Block_Items={movies}/>
             <BlockContent Block_Title={"Watch In One Weekend"} Block_Items={movies} firstBlock={false}/>
             <BlockContent Block_Title={"Critically Acclaimed Movies"} Block_Items={topmovies} firstBlock={false}/>
-
+            <BlockContent Block_Title={"Today's Fresh Picks for You"} Block_Items={discovermovies} firstBlock={false}/>
         </div>
     )
 }
