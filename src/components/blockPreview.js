@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 
 function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount }) {
-    console.log('Props reçues:', { movies: movies?.length, recentlyAddedCount, leavingSoonCount });
 
     const [randomIndexes, setRandomIndexes] = useState({
         recentlyAdded: [],
@@ -17,7 +16,6 @@ function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount }) {
 
         // Générer des index aléatoires uniques sans se chevaucher
         const generateNonOverlappingRandomIndexes = (totalCount, recentlyAddedCount, leavingSoonCount) => {
-            console.log('Génération des index:', { totalCount, recentlyAddedCount, leavingSoonCount });
             const allIndexes = new Set();
             const recentlyAddedIndexes = new Set();
             const leavingSoonIndexes = new Set();

@@ -2,14 +2,14 @@
 import smallLogo from "../assets/icons/netflix_icons/SizeSmall_TypeLetter.svg";
 import NumberTop from "./numberTop";
 
-function BlockCountry({ data }){
+function BlockCountry({ content }){
     return (
         <div className="flex gap-3 max-w-full overflow-x-scroll overflow-y-hidden">
-            {data.slice(1, 11).map((data, index) => {
+            {content.slice(1, 11).map((data, index) => {
                 return (
-                    <div className="flex">
+                    <div key={data.id} className="flex">
                         <NumberTop number={index + 1} />
-                        <div key={data.id} className="w-32 relative flex-shrink-0">
+                        <div className="w-32 relative flex-shrink-0">
                             <img
                                 src={`https://image.tmdb.org/t/p/original${data.poster_path}`}
                                 alt={data.title}

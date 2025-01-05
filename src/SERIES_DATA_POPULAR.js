@@ -12,7 +12,6 @@ const usePopularSeries = (endpoint = 'tv/popular') => {
                 const response = await fetch(`${URL}/${endpoint}?api_key=${API_KEY_FETCH}`)
                 const data = await response.json()
 
-                console.log(data)
 
                 setSeries(data.results || [])
             } catch (e) {
