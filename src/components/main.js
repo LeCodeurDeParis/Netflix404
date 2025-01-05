@@ -3,6 +3,7 @@ import usePopularSeries from '../SERIES_DATA_POPULAR';
 import useTopRatedMovies from '../TOP_RATED_DATA';
 import Animation from './animation';
 import BlockContent from "./blockContent";
+import ContinueWatching from './continueWatching';
 import TopCountry from './topCountry';
 
 function Main(){
@@ -18,7 +19,7 @@ function Main(){
             <BlockContent Block_Title={"We Think You'll Love These"} Block_Items={series} firstBlock={false}/>
             <Animation Block_Title={"Animation"} Block_Movies={movies} Block_Series={series}/>
             <BlockContent Block_Title={"Inspiring Movies"} Block_Items={movies} firstBlock={false}/>
-            
+            <ContinueWatching Block_Title={"Continue Watching"} Block_Items={movies}/>
         </div>
     )
 }

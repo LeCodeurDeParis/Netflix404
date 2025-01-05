@@ -1,11 +1,11 @@
 import smallLogo from "../assets/icons/netflix_icons/SizeSmall_TypeLetter.svg";
 
 
-function Block_Animation({ items }){
+function BlockAnimation({ items }){
     let animation_content = [];
     items.forEach((movie) => {
         movie.genre_ids.forEach(genre => {
-            if(genre == 16){
+            if(genre === 16){
                 animation_content.push(movie);
             }
         });
@@ -32,4 +32,4 @@ function Block_Animation({ items }){
     )
 }
 
-export default Block_Animation;
+export default BlockAnimation;
