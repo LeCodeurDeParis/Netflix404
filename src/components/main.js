@@ -9,7 +9,8 @@ import ContinueWatching from './continueWatching';
 import TopCountry from './topCountry';
 
 function Main(){
-    const { movies } = usePopularMovies();
+
+    const { movies } = usePopularMovies('movie/popular', 2);
     const { series } = usePopularSeries();
     const { topmovies } = useTopRatedMovies();
     const { trendingmovies } = useTrendingMovies();

@@ -11,8 +11,6 @@ const useDiscoverMovies = (endpoint = 'discover/movie') => {
             try {
                 const response = await fetch(`${URL}/${endpoint}?api_key=${API_KEY_FETCH}&sort_by=popularity.desc&page=1`)
                 const data = await response.json()
-
-
                 setDiscoverMovies(data.results || [])
             } catch (e) {
                 console.error("Erreur lors de la récupération des données : ", e)
