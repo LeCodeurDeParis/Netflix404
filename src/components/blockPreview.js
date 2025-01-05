@@ -77,14 +77,14 @@ function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount }) {
                         </div>
                         {/* Label Recently Added */}
                         {randomIndexes.recentlyAdded.includes(originalIndex) && (
-                            <div className="absolute h-full top-40 left-7">
+                            <div className="absolute h-full top-44 left-7">
                                 <img src={rAdded} alt="recently-added" />
                             </div>
                         )}
 
                         {/* Label Leaving Soon */}
                         {randomIndexes.leavingSoon.includes(originalIndex) && (
-                            <div className="absolute h-full top-40 left-7">
+                            <div className="absolute h-full top-44 left-7">
                                 <img src={lSoon} alt="leaving-soon" />
                             </div>
                         )}
