@@ -4,14 +4,14 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './routes/HomePage';
-import DetailPage from './routes/DetailPage';
+import DetailPageMovie from './routes/DetailPageMovie';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/:movieId" element={<DetailPage />} /> 
+      <Route path="/movie/:movieId" element={<DetailPageMovie />} /> 
     </Routes>
   </BrowserRouter>
 );
