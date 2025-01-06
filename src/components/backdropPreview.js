@@ -4,9 +4,9 @@ const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
 
 function BackdropPreview({ movies }) {
 
-    if (!movies || movies.length === 0) {
-        return <div>No backdrop available</div>;
-      }
+  if (!movies || movies.length === 0) {
+    return <div>No backdrop available</div>;
+  }
     
   return (
     <>

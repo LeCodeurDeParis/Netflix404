@@ -15,15 +15,7 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme, addUtilities }) {
-      matchUtilities(
-        {
-          'text-shadow': (value) => ({
-            textShadow: value,
-          }),
-        },
-        { values: theme('textShadow') }
-      )
+    plugin(function ({ addUtilities }) {
       addUtilities({
         '.text-white-stroke': {
           '-webkit-text-stroke-width': '4px',

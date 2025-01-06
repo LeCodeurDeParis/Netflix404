@@ -4,7 +4,7 @@ import lSoon from "../assets/icons/labels/LeavingSoon_Medium.svg";
 import { useEffect, useState } from "react";
 
 
-function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount }) {
+function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount, onMovieClick }) {
 
     const [randomIndexes, setRandomIndexes] = useState({
         recentlyAdded: [],
@@ -62,7 +62,7 @@ function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount }) {
                 const originalIndex = index + 1;
 
                 return (
-                    <div key={movie.id} className="w-32 relative flex-shrink-0">
+                    <div key={movie.id} className="w-32 relative flex-shrink-0 target" onClick={() => onMovieClick(movie)}>
                         <img
                             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                             alt={movie.title}

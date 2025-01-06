@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './routes/HomePage';
 import DetailPageMovie from './routes/DetailPageMovie';
+import DetailPageSerie from './routes/DetailPageSerie';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/movie/:movieId" element={<DetailPageMovie />} /> 
+      <Route path="/tv/:serieId" element={<DetailPageSerie />} />
     </Routes>
   </BrowserRouter>
 );
