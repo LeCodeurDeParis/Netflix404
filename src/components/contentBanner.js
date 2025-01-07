@@ -1,4 +1,3 @@
-import ContentInfo from '../components/contentInfo';
 import smallLogo from '../assets/icons/netflix_icons/SizeSmall_TypeLetter.svg';
 import playButton from '../assets/icons/buttons/Button_Play.svg';
 import addButton from '../assets/icons/buttons/Button_AddList.svg';
@@ -20,6 +19,7 @@ export default function ContentBanner({ movie }) {
                     <p className='text-white text-lg tracking-widest'>SERIES</p>
                 </div>
                 <p className="text-white text-3xl font-bold">{movie.title}</p>
+                <p className="text-white/60 italic">{movie.tagline}</p>
                 <div className='flex items-center gap-2 mt-2'>
                     <img src={playButton} alt='play-button' />
                     <img src={addButton} alt='add-button' />
