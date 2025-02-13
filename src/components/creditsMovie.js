@@ -1,8 +1,11 @@
-export default function CreditsMovie({ movie, cast }) {
+export default function CreditsMovie({ content, cast }) {
 
-    // Vérification pour éviter des erreurs si cast ou cast.cast est indéfini
     if (!cast || !Array.isArray(cast.cast)) {
         return <p className="text-white/50">No cast information available.</p>;
+    }
+
+    if (!content || !Array.isArray(content.genres)) {
+        return <p className="text-white/50">No genre information available.</p>;
     }
 
     return (
@@ -15,7 +18,7 @@ export default function CreditsMovie({ movie, cast }) {
             </div>
             <div className="flex gap-4">
                 <p className="text-white/50 px-2">Genres:</p>
-                {movie.genres.map((data) => (
+                {content.genres.map((data) => (
                     <p key={data.id}>{data.name}</p>
                 ))}
             </div>

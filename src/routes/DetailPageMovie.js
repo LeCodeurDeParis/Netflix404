@@ -4,8 +4,6 @@ import useMovieById from '../MOVIE_ID_DATA';
 import useCastMovie from '../CAST_MOVIE_DATA';
 import Cast from '../components/cast';
 
-
-
 export default function DetailPageMovie() {
 
     const pathname = window.location.pathname;
@@ -14,9 +12,9 @@ export default function DetailPageMovie() {
     const cast = useCastMovie(id);
     return (
         <div className='bg-[#141414] h-[100vh]'>
-            <ContentBanner movie={movie} />
-            <ContentInfo movie={movie} cast={cast} />
-            <Cast movie={movie} cast={cast} />
+            <ContentBanner content={movie} />
+            <ContentInfo content={movie} cast={cast} />
+            <Cast cast={cast} />
         </div>
     );
 }

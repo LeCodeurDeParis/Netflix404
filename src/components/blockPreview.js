@@ -14,17 +14,14 @@ function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount, onMovieCli
 
     useEffect(() => {
 
-        // Générer des index aléatoires uniques sans se chevaucher
         const generateNonOverlappingRandomIndexes = (totalCount, recentlyAddedCount, leavingSoonCount) => {
             const allIndexes = new Set();
             const recentlyAddedIndexes = new Set();
             const leavingSoonIndexes = new Set();
 
-            // Ensure we don't request more unique indexes than available movies
             const effectiveRecentlyAddedCount = Math.min(recentlyAddedCount, totalCount);
             const effectiveLeavingSoonCount = Math.min(leavingSoonCount, totalCount - effectiveRecentlyAddedCount);
 
-            // Generate Recently Added indexes
             while (recentlyAddedIndexes.size < effectiveRecentlyAddedCount) {
                 const randomIndex = Math.floor(Math.random() * totalCount);
                 if (!allIndexes.has(randomIndex)) {
@@ -33,7 +30,6 @@ function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount, onMovieCli
                 }
             }
 
-            // Generate Leaving Soon indexes
             while (leavingSoonIndexes.size < effectiveLeavingSoonCount) {
                 const randomIndex = Math.floor(Math.random() * totalCount);
                 if (!allIndexes.has(randomIndex)) {
@@ -48,7 +44,6 @@ function BlockPreview({ movies, recentlyAddedCount, leavingSoonCount, onMovieCli
             };
         };
 
-        // Skip the first movie (movies.slice(1))
         setRandomIndexes(generateNonOverlappingRandomIndexes(
             movies.length - 1,
             recentlyAddedCount,

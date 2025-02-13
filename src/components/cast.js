@@ -1,6 +1,6 @@
 import CastCard from "./castCard";
 
-export default function Cast({ movie, cast }) {
+export default function Cast({ cast }) {
     if (!cast || !Array.isArray(cast.cast)) {
         return <p className="text-white/50">No cast information available.</p>;
     }
